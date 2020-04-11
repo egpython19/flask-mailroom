@@ -3,9 +3,16 @@
 {% block subtitle %}Donations{% endblock subtitle %}
 
 {% block content %}
-<ul>
+
+<div class ="card-columns">
     {% for donation in donations %}
-        <li><b>{{ donation.donor.name }}</b>: {{ donation.value }}</li>
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">{{ donation.donor.name }}'s Donation</h5>
+            <p class="card-text">Value: ${{ donation.value }}</p>
+        </div>
+    </div>
     {% endfor %}
-</ul>
+</div>
+
 {% endblock content %}
