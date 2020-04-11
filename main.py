@@ -22,7 +22,7 @@ def all():
     return render_template('donations.jinja2', donations=donations)
 
 
-@app.route('/new/', methods=['GET', 'POST'])
+@app.route('/add/', methods=['GET', 'POST'])
 def add():
     if request.method == 'GET':
         return render_template('add.jinja2')
